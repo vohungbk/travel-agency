@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function NotFound() {
@@ -12,10 +13,7 @@ function NotFound() {
                 <nav aria-label="breadcrumb">
                   <ol className="breadcrumb justify-content-center">
                     <li className="breadcrumb-item">
-                      <a href="#">Home</a>
-                    </li>
-                    <li className="breadcrumb-item">
-                      <a href="#">Pages</a>
+                      <Link href={"/"}>Home</Link>
                     </li>
                     <li className="breadcrumb-item text-white active" aria-current="page">
                       404

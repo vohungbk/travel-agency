@@ -2,6 +2,9 @@ import { Footer, Nav, Spinner } from "@/components";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import Script from "next/script";
+import "../public/lib/animate/animate.min.css";
+import "../public/lib/owlcarousel/assets/owl.carousel.min.css";
+import "../public/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css";
 import "../public/css/bootstrap.min.css";
 import "./globals.css";
 

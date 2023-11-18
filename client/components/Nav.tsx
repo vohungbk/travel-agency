@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Nav() {
@@ -52,47 +53,45 @@ function Nav() {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto py-0">
-              <a href="index.html" className="nav-item nav-link">
+              <Link href="/" className="nav-item nav-link">
                 Home
-              </a>
-              <a href="about.html" className="nav-item nav-link">
+              </Link>
+              <Link href="/about" className="nav-item nav-link">
                 About
-              </a>
-              <a href="service.html" className="nav-item nav-link">
+              </Link>
+              <Link href="/services" className="nav-item nav-link">
                 Services
-              </a>
-              <a href="package.html" className="nav-item nav-link">
+              </Link>
+              <Link href="/package" className="nav-item nav-link">
                 Packages
-              </a>
+              </Link>
+
               <div className="nav-item dropdown">
-                <a href="#" className="nav-link dropdown-toggle active" data-bs-toggle="dropdown">
+                <Link href="#" className="nav-link dropdown-toggle active" data-bs-toggle="dropdown">
                   Pages
-                </a>
+                </Link>
                 <div className="dropdown-menu m-0">
-                  <a href="destination.html" className="dropdown-item">
+                  <Link href="/destination" className="dropdown-item">
                     Destination
-                  </a>
-                  <a href="booking.html" className="dropdown-item">
+                  </Link>
+                  <Link href="/destination" className="dropdown-item">
                     Booking
-                  </a>
-                  <a href="team.html" className="dropdown-item">
+                  </Link>
+                  <Link href="/destination" className="dropdown-item">
                     Travel Guides
-                  </a>
-                  <a href="testimonial.html" className="dropdown-item">
+                  </Link>
+                  <Link href="/destination" className="dropdown-item">
                     Testimonial
-                  </a>
-                  <a href="404.html" className="dropdown-item active">
-                    404 Page
-                  </a>
+                  </Link>
                 </div>
               </div>
-              <a href="contact.html" className="nav-item nav-link">
+              <Link href="/contact" className="nav-item nav-link">
                 Contact
-              </a>
+              </Link>
             </div>
-            <a href="" className="btn btn-primary rounded-pill py-2 px-4">
+            <Link href="" className="btn btn-primary rounded-pill py-2 px-4">
               Register
-            </a>
+            </Link>
           </div>
         </nav>
       </div>
