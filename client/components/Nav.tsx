@@ -74,13 +74,13 @@ function Nav() {
                   <Link href="/destination" className="dropdown-item">
                     Destination
                   </Link>
-                  <Link href="/destination" className="dropdown-item">
+                  <Link href="/booking" className="dropdown-item">
                     Booking
                   </Link>
-                  <Link href="/destination" className="dropdown-item">
+                  <Link href="/team" className="dropdown-item">
                     Travel Guides
                   </Link>
-                  <Link href="/destination" className="dropdown-item">
+                  <Link href="/testimonial" className="dropdown-item">
                     Testimonial
                   </Link>
                 </div>
