@@ -4,4 +4,6 @@ export class FilterPostDto {
   itemPerPage: string;
 
   page: string;
+
+  category: string;
 }
