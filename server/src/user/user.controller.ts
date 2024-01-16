@@ -31,12 +31,14 @@ import { extname } from 'path';
 export class UserController {
   constructor(private userService: UserService) {}
 
-  @UseGuards(AuthGuard)
+  // @UseGuards(AuthGuard)
   @ApiQuery({ name: 'page' })
   @ApiQuery({ name: 'itemPerPage' })
   @ApiQuery({ name: 'search' })
   @Get()
-  findAll(@Query() query: FilterUserDto): Promise<UserEntity[]> {
+  async findAll(@Query() query: FilterUserDto): Promise<UserEntity[]> {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     return this.userService.findAll(query);
   }
 
@@ -46,9 +48,11 @@ export class UserController {
     return this.userService.findById(id);
   }
 
-  @UseGuards(AuthGuard)
+  // @UseGuards(AuthGuard)
   @Post()
   create(@Body() data: CreateUserDto): Promise<UserEntity> {
+    console.log(data);
+
     return this.userService.create(data);
   }
 
@@ -61,7 +65,7 @@ export class UserController {
     return this.userService.update(data, id);
   }
 
-  @UseGuards(AuthGuard)
+  // @UseGuards(AuthGuard)
   @Delete('/:id')
   delete(@Param('id') id: string): Promise<DeleteResult> {
     return this.userService.delete(id);

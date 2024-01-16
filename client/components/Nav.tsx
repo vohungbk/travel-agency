@@ -1,7 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
+import ActiveLink from "./ActiveLink";
 
 function Nav() {
+  const pathname = usePathname() || "/";
+
   return (
     <>
       <div className="container-fluid bg-dark px-5 d-none d-lg-block">
@@ -53,21 +59,13 @@ function Nav() {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto py-0">
-              <Link href="/" className="nav-item nav-link">
-                Home
-              </Link>
-              <Link href="/about" className="nav-item nav-link">
-                About
-              </Link>
-              <Link href="/services" className="nav-item nav-link">
-                Services
-              </Link>
-              <Link href="/package" className="nav-item nav-link">
-                Packages
-              </Link>
+              <ActiveLink href="/">Home</ActiveLink>
+              <ActiveLink href="/about">About</ActiveLink>
+              <ActiveLink href="/services">Services</ActiveLink>
+              <ActiveLink href="/package">Packages</ActiveLink>
 
               <div className="nav-item dropdown">
-                <Link href="#" className="nav-link dropdown-toggle active" data-bs-toggle="dropdown">
+                <Link href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                   Pages
                 </Link>
                 <div className="dropdown-menu m-0">
@@ -85,9 +83,7 @@ function Nav() {
                   </Link>
                 </div>
               </div>
-              <Link href="/contact" className="nav-item nav-link">
-                Contact
-              </Link>
+              <ActiveLink href="/contact">Contact</ActiveLink>
             </div>
             <Link href="" className="btn btn-primary rounded-pill py-2 px-4">
               Register
