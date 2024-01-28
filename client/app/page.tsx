@@ -1,4 +1,8 @@
-export default function Home() {
+export default async function Home() {
+  const response = await fetch("http://localhost:4000/data");
+
+  const res = await response.json();
+
   return (
     <main>
       <div className="container-fluid position-relative p-0">
